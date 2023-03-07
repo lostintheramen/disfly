@@ -10,7 +10,9 @@ Disfly is a fully functional Discord bot that runs in your terminal. It comes eq
 
 Check node version with:
 
-    node -v
+```
+node -v
+```
 
 <img src="https://i.imgur.com/q7fw6Jr.png" title="source: imgur.com" height="80" />
 
@@ -24,11 +26,15 @@ Manually:
 
 With Git:
 
-    git clone https://github.com/lostintheramen/disfly.git
+```
+git clone https://github.com/lostintheramen/disfly.git
+```
 
 With GitHub CLI:
 
-    gh repo clone lostintheramen/disfly
+```
+gh repo clone lostintheramen/disfly
+```
 
 ##### 2. Run
 
@@ -40,26 +46,30 @@ With GitHub CLI:
 
 3. Change directory to where you cloned the repository
 
-
-    cd path/to/disfly
+```
+cd path/to/disfly
+```
 
 4. Install packages and run
 
-
-    npm i
-    node bin/index.js
+```
+npm i
+node bin/index.js
+```
 
 ###### On Linux:
 
 1. Open your terminal of choice | Ctrl+Alt+T
 
-2. Change directory to where you cloned the repository 
+2. Change directory to where you cloned the repository
 
-
-    cd path/to/disfly
+```
+cd path/to/disfly
+```
 
 3. Install packages and run
 
-
-    npm i
-    node bin/index.js
+```
+npm i
+node bin/index.js
+```
