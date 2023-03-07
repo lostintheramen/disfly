@@ -13,7 +13,7 @@ const packagejson = require('../package.json');
 
 function boot() {
   console.log(
-    chalk.white(`
+    chalk.hex('#ffffff')(`
        _ _      __ _
       | (_)    / _| |
     __| |_ ___| |_| |_   _
@@ -33,7 +33,7 @@ function boot() {
   );
 
   console.log(
-    chalk.white(
+    chalk.hex('#ffffff')(
       `Welcome to disfly.\nTo start, paste your discord bot token here:`
     )
   );
@@ -44,18 +44,20 @@ const askToken = async () => {
   const answer = await inquirer.prompt({
     name: 'token',
     type: 'input',
-    message: chalk.green.bold('>'),
+    message: chalk.hex('#00ff00').bold('>'),
   });
 
   await client.login(answer.token).catch((error) => {
-    console.log(chalk.red.bold(error));
+    console.log(chalk.hex('#ff0000').bold(error));
   });
 
   if (client.user?.id) {
     console.log(
-      chalk.green.bold(
-        `Logged into ${client.user.tag}\nType \`help\` for a list of commands`
-      )
+      chalk
+        .hex('#00ff00')
+        .bold(
+          `Logged into ${client.user.tag}\nType \`help\` for a list of commands`
+        )
     );
     main();
   } else {
@@ -83,7 +85,7 @@ const main = async () => {
   const answer = await inquirer.prompt({
     name: 'command',
     type: 'input',
-    message: chalk.green.bold('>'),
+    message: chalk.hex('#00ff00').bold('>'),
   });
 
   const args = answer.command.split(' ');
@@ -93,9 +95,11 @@ const main = async () => {
 
   if (!cmd) {
     console.log(
-      chalk.red.bold(
-        'Error: An invalid command was provided.\nTo see a list of valid commands, use `help`'
-      )
+      chalk
+        .hex('#ff0000')
+        .bold(
+          'Error: An invalid command was provided.\nTo see a list of valid commands, use `help`'
+        )
     );
     return main();
   }

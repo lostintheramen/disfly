@@ -24,22 +24,22 @@ module.exports = {
         }
       }
 
-      console.log(chalk.white.bold(formattedTree));
+      console.log(chalk.hex('#ffffff').bold(formattedTree));
     } else {
       if (!client.commands.has(args[0])) {
         console.log(
-          chalk.red.bold(
-            'Error: An invalid argument was provided.'
-          )
+          chalk.hex('#ff0000').bold('Error: An invalid argument was provided.')
         );
       } else {
         const cmd = client.commands.get(args[0]);
         const { name, description, arguments } = cmd.data;
 
         console.log(
-          chalk.white.bold(
-            `Name: ${name}\nDescription: ${description}\nArguments: ${arguments}`
-          )
+          chalk
+            .hex('#ffffff')
+            .bold(
+              `Name: ${name}\nDescription: ${description}\nArguments: ${arguments}`
+            )
         );
       }
     }
